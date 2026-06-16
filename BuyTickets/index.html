@@ -378,7 +378,7 @@
             ticketBtn.classList.toggle('d-none', selectedTickets.size === 0);
             sponsorBtn.classList.toggle('d-none', selectedSponsors.size === 0);
 
-            ticketBtn.href = `checkout.html?type=tickets&items=ticket-group,ticket-brand=${encodeURIComponent([...selectedTickets].join(','))}`;
+            ticketBtn.href = `checkout.html?type=tickets&items=${encodeURIComponent([...selectedTickets].join(','))}`;
             sponsorBtn.href = `checkout.html?type=sponsors&items=${encodeURIComponent([...selectedSponsors].join(','))}`;
 
             ticketBtn.textContent = `Proceed to Payment (${formatCurrency(ticketTotal, 'KES')})`;
